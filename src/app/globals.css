@@ -8,5 +8,7 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-k2d: var(--font-k2d);
+  --font-inria_serif: var(--font-inria_serif)
 }
 

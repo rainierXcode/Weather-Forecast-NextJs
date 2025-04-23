@@ -24,11 +24,10 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   variant?: InputVariant;
   sizing?: InputSize;   
   error?: string,
-  name: string
 };
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, variant = "default", sizing = "md", type = "text", error, name , ...props }, ref) => {
+  ({ className, variant = "default", sizing = "md", type = "text", error , ...props }, ref) => {
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const isPassword = type === "password";
 
@@ -36,8 +35,6 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       <div className="w-full">
         <div className="relative">
           <input
-            id={name}
-            name={name}
             type={isPassword && showPassword ? "text" : type}
             autoComplete="off"
             ref={ref}
